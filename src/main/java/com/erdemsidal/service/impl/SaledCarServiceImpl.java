@@ -55,12 +55,11 @@ public class SaledCarServiceImpl implements ISaledCarService {
 
         BigDecimal customerUSDAmount = customer.getAccount().getAmount().divide(usd,2, RoundingMode.HALF_UP);
 
-        return customerUSDAmount; // divide bölmek için kullanır amountu yani tutarı usd ye böler.
-
+        return customerUSDAmount;
     }
 
 
-    //35000 dolar var diyelim adamın parasını dolardan tl olarak çevirip kaydetmemiz lazım.
+
     public BigDecimal remainingCustomerAmount(Customer customer,Car car){
 
         BigDecimal customerUSDAmount = convertCustomerAmountToUSD(customer);
